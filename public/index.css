@@ -2,3 +2,7 @@
 body {
   font-family: sans-serif;
 }
+
+main > .container {
+  padding: 60px 15px 0;
+}

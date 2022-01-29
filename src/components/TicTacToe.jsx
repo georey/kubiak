@@ -2,9 +2,9 @@ import React from "react";
 
 const TicTacToe = () => {
   return(
-    <div>
-      TIC TAC TOE
-    </div>
+    <h1 className="mt-5">
+      Tic Tac Toe
+    </h1>
   )
 }
 
