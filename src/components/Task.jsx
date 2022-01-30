@@ -1,7 +1,14 @@
 import React from 'react';
 
-const Task = () => {
+const Task = ({key, description}) => {
     return(
-        <di>New Task</di>
+        <div className="form-check">
+            <input key={key} className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <label className="form-check-label" for="flexCheckDefault">
+                {description}
+            </label>
+        </div>
     )
 }
+
+export default Task
