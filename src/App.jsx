@@ -28,8 +28,8 @@ function App() {
                 </div>
             </div>
         </nav>
-        <main class="flex-shrink-0">
-            <div class="container">
+        <main className="flex-shrink-0">
+            <div className="container">
                 <Routes>
                     <Route path="/todo" element={<Todo/>} />
                     <Route path="/tictactoe" element={<TicTacToe />} />

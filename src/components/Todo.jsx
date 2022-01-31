@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Pokemon from "./Pokemon";
 import Task from './Task';
 
-export default function Todo(){
+const Todo = () =>{
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
@@ -35,3 +35,5 @@ export default function Todo(){
     </div>
   )
 }
+
+export default Todo;
