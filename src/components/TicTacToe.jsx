@@ -1,6 +1,8 @@
 import react from "react";
 import React, { useState } from "react";
 import { calculateWinner } from "../assets/helpers/winner";
+import xWin from "../assets/images/x-win.gif";
+import oWin from "../assets/images/o-win.gif";
 import Board from "./Board";
 const TicTacToe = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -22,13 +24,21 @@ const TicTacToe = () => {
     setStep(historyPoint.length);
     setXTurn(!xTurn);
   }
+
+  const restart = () => {
+    setHistory([Array(9).fill(null)]);
+    setStep(0);
+    setXTurn(true);
+  }
+
   return (
     <react.Fragment>
       <h1 className="p-3">
         Tic Tac Toe
       </h1>
-      <Board squares={history[step]} onClick={handleClick} />
-      <h3>{winner ? "Winner:" + winner : "Player:" + player}</h3>
+      <button type="button" className="btn btn-dark" onClick={restart}>Restart Game</button>
+      <Board squares={history[step]} onClick={handleClick} winner={winner} player={player} />
+      {winner ? <img src={player == "O" ? xWin : oWin} /> : ""}
     </react.Fragment>
   )
 }
