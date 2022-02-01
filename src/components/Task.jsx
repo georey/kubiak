@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Task = ({key, description}) => {
-    return(
+const Task = ({ description }) => {
+    return (
         <div className="form-check">
-            <input key={key} className="form-check-input" type="checkbox" value="" id={key} />
-            <label className="form-check-label" for="flexCheckDefault">
+            <input className="form-check-input" type="checkbox" value="" />
+            <label className="form-check-label" htmlFor="flexCheckDefault" >
                 {description}
             </label>
         </div>

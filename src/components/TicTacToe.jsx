@@ -1,6 +1,6 @@
 import react from "react";
 import React, { useState } from "react";
-import {calculateWinner} from "../assets/helpers/winner";
+import { calculateWinner } from "../assets/helpers/winner";
 import Board from "./Board";
 const TicTacToe = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -13,18 +13,18 @@ const TicTacToe = () => {
     const historyPoint = history.slice(0, step + 1);
     const current = historyPoint[step];
     const squares = [...current];
-    
+
     //if there are a winner or square is selected do nothing
-    if(winner || squares[index]) return;
+    if (winner || squares[index]) return;
 
     squares[index] = player;
-    setHistory([...historyPoint,squares]);    
+    setHistory([...historyPoint, squares]);
     setStep(historyPoint.length);
     setXTurn(!xTurn);
   }
-  return(
+  return (
     <react.Fragment>
-      <h1 className="mt-5">
+      <h1 className="p-3">
         Tic Tac Toe
       </h1>
       <Board squares={history[step]} onClick={handleClick} />

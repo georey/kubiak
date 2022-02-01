@@ -1,4 +1,8 @@
 /* Add CSS styles here! */
+html {
+  height: 100%;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -25,4 +29,12 @@ main > .container {
   padding: 0;
   text-align: center;
   width: 34px;
+}
+
+.themed-container {
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(205, 206, 207, 0.15);
+  border: 1px solid rgba(133, 133, 133, 0.2);
+  height: 100%;
 }
